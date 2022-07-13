@@ -14,7 +14,7 @@ RUN npm install
 RUN PUBLIC_URL=/static/reactapp/ npm run build
 
 # Stage 2: Backend
-FROM python:3.9.9-buster
+FROM python:3.10.5-buster
 
 COPY --from=frontend-build /build /var/www/reactapp
 
